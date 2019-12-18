@@ -25,7 +25,7 @@ export class LocationdetailsComponent implements OnInit {
 
   deleteLocation() {
     this.locationService.deleteLocation(this.id).subscribe((res) => {
-      if (res.status.code === 0) {
+      if (res.status === 0) {
         this.router.navigate(['/list']);
         alert('Location deleted successfully');
       }
